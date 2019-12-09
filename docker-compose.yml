@@ -1,0 +1,28 @@
+version: "3"
+
+networks:
+    web:
+        external: true
+
+services:
+    platform:
+        image:  0x12f/platform:latest
+        environment:
+            - DEBUG=0
+            - ANALYTICS=1
+            - SALT=si12Fd-d3stcR-hD19Ld
+          # - DATABASE=mysql://user:secret@localhost/mydb
+        volumes:
+            - $PWD/resource:/var/container/public/resource:ro
+            - $PWD/theme:/var/container/theme:ro
+            - $PWD/var:/var/container/var:rw
+            - $PWD/var/upload:/var/container/public/uploads:rw
+        labels:
+            - traefik.enable=true
+            - traefik.port=80
+            - traefik.backend=site.0x12f.com
+            - traefik.frontend.rule=Host:site.0x12f.com
+        #   - traefik.frontend.redirect.entryPoint=https
+            - traefik.docker.network=web
+        networks:
+            - web
