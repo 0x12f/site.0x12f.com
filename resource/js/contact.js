@@ -16,10 +16,6 @@ $(document).ready(function(){
                     required: true,
                     minlength: 2
                 },
-                subject: {
-                    required: true,
-                    minlength: 4
-                },
                 number: {
                     required: true,
                     minlength: 5
@@ -80,6 +76,6 @@ $(document).ready(function(){
             }
         })
     })
-        
+    
  })(jQuery)
 })
