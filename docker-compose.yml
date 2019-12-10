@@ -6,17 +6,17 @@ networks:
 
 services:
     platform:
-        image:  0x12f/platform:latest
+        image: 0x12f/platform:dev
         environment:
-            - DEBUG=0
+            - DEBUG=1
             - ANALYTICS=1
             - SALT=si12Fd-d3stcR-hD19Ld
           # - DATABASE=mysql://user:secret@localhost/mydb
         volumes:
-            - $PWD/resource:/var/container/public/resource:ro
-            - $PWD/theme:/var/container/theme:ro
-            - $PWD/var:/var/container/var:rw
-            - $PWD/var/upload:/var/container/public/uploads:rw
+            - ./resource:/var/container/public/resource:ro
+            - ./theme:/var/container/theme:ro
+            - ./var:/var/container/var:rw
+            - ./var/upload:/var/container/public/uploads:rw
         labels:
             - traefik.enable=true
             - traefik.port=80
