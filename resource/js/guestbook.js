@@ -3,7 +3,7 @@ $(document).ready(function () {
         "use strict";
         
         $(function () {
-            $('#contactForm').validate({
+            $('#guestbookForm').validate({
                 rules: {
                     name: {
                         required: true,
@@ -38,13 +38,13 @@ $(document).ready(function () {
                     $.ajax({
                         type: 'POST',
                         data: formData,
-                        url: '/form/forma-kontaktov',
+                        url: '/guestbook',
                         contentType: false,
                         cache: false,
                         processData: false,
                         success: function () {
-                            $('#contactForm :input').attr('disabled', 'disabled');
-                            $('#contactForm').fadeTo('slow', 1, function () {
+                            $('#guestbookForm :input').attr('disabled', 'disabled');
+                            $('#guestbookForm').fadeTo('slow', 1, function () {
                                 $(this).find(':input').attr('disabled', 'disabled');
                                 $(this).find('label').css('cursor', 'default');
                                 $('#success').fadeIn();
@@ -53,7 +53,7 @@ $(document).ready(function () {
                             })
                         },
                         error: function () {
-                            $('#contactForm').fadeTo('slow', 1, function () {
+                            $('#guestbookForm').fadeTo('slow', 1, function () {
                                 $('#error').fadeIn();
                                 $('.modal').modal('hide');
                                 $('#error').modal('show');

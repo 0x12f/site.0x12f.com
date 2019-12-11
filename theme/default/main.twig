@@ -15,37 +15,44 @@
 
 {% block body %}
     <body>
-    {% include "common/menu.twig" %}
+        {% include "common/menu.twig" %}
 
-    {% block bodyinner %}
-        {% block page %}
-            {% include "common/hero.twig" %}
-            {#{% include "common/brands.twig" %}#}
-            {% include "common/service.twig" %}
-            {% include "common/productivity.twig" %}
-            {#{% include "common/portfolio.twig" %}#}
-            {#{% include "common/team.twig" %}#}
-            {% include "common/guestbook.twig" %}
-            {#{% include "common/cta.twig" %}#}
-            {% include "common/blog.twig" %}
+        {% block bodyinner %}
+            {% block page %}
+                {% include "common/hero.twig" %}
+                {#{% include "common/brands.twig" %}#}
+                {% include "common/service.twig" %}
+                {% include "common/productivity.twig" %}
+                {#{% include "common/portfolio.twig" %}#}
+                {#{% include "common/team.twig" %}#}
+                {% include "common/guestbook.twig" %}
+                {#{% include "common/cta.twig" %}#}
+                {% include "common/blog.twig" %}
+            {% endblock %}
         {% endblock %}
-    {% endblock %}
 
-    {% include "common/footer.twig" %}
+        {% include "common/footer.twig" %}
 
-    <script src="/resource/js/vendor/jquery-2.2.4.min.js"></script>
-    <script src="/resource/js/vendor/popper.min.js"></script>
-    <script src="/resource/js/vendor/bootstrap.min.js"></script>
-    <script src="/resource/js/jquery.ajaxchimp.min.js"></script>
-    <script src="/resource/js/jquery.magnific-popup.min.js"></script>
-    <script src="/resource/js/parallax.min.js"></script>
-    <script src="/resource/js/owl.carousel.min.js"></script>
-    <script src="/resource/js/jquery.nice-select.min.js"></script>
-    <script src="/resource/js/jquery.sticky.js"></script>
-    <script src="/resource/js/hexagons.min.js"></script>
-    <script src="/resource/js/jquery.counterup.min.js"></script>
-    <script src="/resource/js/waypoints.min.js"></script>
-    <script src="/resource/js/main.js"></script>
+        <script src="/resource/js/vendor/jquery-2.2.4.min.js"></script>
+        <script src="/resource/js/vendor/popper.min.js"></script>
+        <script src="/resource/js/vendor/bootstrap.min.js"></script>
+        <script src="/resource/js/jquery.ajaxchimp.min.js"></script>
+        <script src="/resource/js/jquery.magnific-popup.min.js"></script>
+        <script src="/resource/js/parallax.min.js"></script>
+        <script src="/resource/js/owl.carousel.min.js"></script>
+        <script src="/resource/js/jquery.nice-select.min.js"></script>
+        <script src="/resource/js/jquery.sticky.js"></script>
+        <script src="/resource/js/hexagons.min.js"></script>
+        <script src="/resource/js/jquery.counterup.min.js"></script>
+        <script src="/resource/js/waypoints.min.js"></script>
+        <script src="/resource/js/main.js"></script>
+
+        <script src="/resource/js/jquery.form.js"></script>
+        <script src="/resource/js/jquery.validate.min.js"></script>
+        <script src="/resource/js/contact.js"></script>
+        <script src="/resource/js/guestbook.js"></script>
+
+        {% include "mixin/recaptcha.twig" %}
     </body>
 {% endblock %}
 

@@ -1,6 +1,6 @@
 {% set messages = guestbook({'date': 'desc'}) %}
 
-<!--================ Start Testimonial Area =================-->
+<!--================ Start Guestbook Area =================-->
 <section class="testimonial-area section-gap">
     <div class="container">
         <div class="row justify-content-center">
@@ -16,7 +16,7 @@
             <div class="col-lg-8">
                 <p>Оставьте свой отзыв о нас, для других посетителей.</p>
 
-                <form class="row contact_form" action="/guestbook" method="post" id="contactForm" novalidate="novalidate">
+                <form class="row contact_form" action="/guestbook" method="post" id="guestbookForm" novalidate="novalidate">
                     <div class="col-md-5">
                         <div class="form-group">
                             <input type="text" class="form-control" id="name" name="name" placeholder="Ваше имя">
@@ -68,5 +68,35 @@
         {% endif %}
     </div>
 </section>
-<!--================ End Testimonial Area =================-->
+<!--================ End Guestbook Area =================-->
 
+<!--================Guestbook Success and Error message Area =================-->
+<div class="modal modal-message fade" id="success" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                    <i class="fa fa-close"></i>
+                </button>
+                <h2>Спасибо</h2>
+                <p>Ваш отзыв успешно отправлен!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modals error -->
+<div class="modal modal-message fade" id="error" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                    <i class="fa fa-close"></i>
+                </button>
+                <h2>Упс!</h2>
+                <p>Что-то пошло как всегда..</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--================End Guestbook Success and Error message Area =================-->
