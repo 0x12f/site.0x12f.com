@@ -2678,7 +2678,7 @@ h6 {
 
 .side_menu .menu-left li .dropdown-menu {
     top: -36px !important;
-    left: 110px !important;
+    left: 155px !important;
     border: 0;
     background: #4ba0f9;
     border-radius: 0px;
@@ -3358,27 +3358,27 @@ h6 {
     visibility: visible;
 }
 
-#project-details .single-details p {
+.project-details .single-details p {
     padding-right: 0;
     font-weight: 400;
 }
 
-#project-details .single-details h4 {
+.project-details .single-details h4 {
     font-size: 24px;
     margin-bottom: 30px;
 }
 
-#project-details .single-details .list {
+.project-details .single-details .list {
     margin-top: 50px;
 }
 
-#project-details .single-details .list li {
+.project-details .single-details .list li {
     margin-bottom: 7px;
     font-weight: normal;
     font-size: 14px;
 }
 
-#project-details .single-details .list li span {
+.project-details .single-details .list li span {
     font-size: 14px;
     color: #000000;
     font-weight: 400;
@@ -3386,30 +3386,30 @@ h6 {
     display: inline-block;
 }
 
-#project-details .single-details .list li:last-child {
+.project-details .single-details .list li:last-child {
     margin-bottom: 0px;
 }
 
-#project-details .single-details .list li i {
+.project-details .single-details .list li i {
     color: #f1cd09;
 }
 
-#project-details .single-details .social_details {
+.project-details .single-details .social_details {
     margin-top: 40px;
 }
 
 @media (max-width: 480px) {
-    #project-details .single-details .social_details {
+    .project-details .single-details .social_details {
         margin-top: 20px;
     }
 }
 
-#project-details .single-details .social_details li {
+.project-details .single-details .social_details li {
     display: inline-block;
     margin-right: 14px;
 }
 
-#project-details .single-details .social_details li a {
+.project-details .single-details .social_details li a {
     font-size: 14px;
     -webkit-transition: all 0.3s ease 0s;
     -moz-transition: all 0.3s ease 0s;
@@ -3417,7 +3417,7 @@ h6 {
     transition: all 0.3s ease 0s;
 }
 
-#project-details .single-details .social_details li a i {
+.project-details .single-details .social_details li a i {
     color: #000000 !important;
     -webkit-transition: all 0.3s ease 0s;
     -moz-transition: all 0.3s ease 0s;
@@ -3425,11 +3425,11 @@ h6 {
     transition: all 0.3s ease 0s;
 }
 
-#project-details .single-details .social_details li a i:hover {
+.project-details .single-details .social_details li a i:hover {
     color: #4ba0f9 !important;
 }
 
-#project-details .single-details .social_details li:last-child {
+.project-details .single-details .social_details li:last-child {
     margin-right: 0px;
 }
 
