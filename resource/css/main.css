@@ -6603,4 +6603,16 @@ h6 {
 /*  End Footer Area CSS
 /* =================================== */
 
+select.form-control + .nice-select {
+    width: 100%;
+    height: calc(2.25rem + 2px);
+    margin-bottom: 10px;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    padding-left: 13px;
+    color: #6c757d;
+}
+
 /*# sourceMappingURL=main.css.map */

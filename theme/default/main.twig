@@ -24,9 +24,9 @@
                 {% include "common/service.twig" %}
                 {% include "common/productivity.twig" %}
                 {#{% include "common/portfolio.twig" %}#}
-                {#{% include "common/team.twig" %}#}
+                {% include "common/cta.twig" %}
                 {% include "common/guestbook.twig" %}
-                {#{% include "common/cta.twig" %}#}
+                {#{% include "common/team.twig" %}#}
                 {% include "common/blog.twig" %}
             {% endblock %}
         {% endblock %}
@@ -51,6 +51,7 @@
         <script src="/resource/js/jquery.validate.min.js"></script>
         <script src="/resource/js/contact.js"></script>
         <script src="/resource/js/guestbook.js"></script>
+        <script src="/resource/js/quiz.js"></script>
 
         {% include "mixin/recaptcha.twig" %}
     </body>

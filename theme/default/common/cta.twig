@@ -3,14 +3,97 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-7 col-md-12">
-                <h2>Вам нужен сайт?</h2>
-                <p>
-
-                </p>
-                <a href="#" class="primary-btn">Get Estimate for Free</a>
+                <h2>Мы можем сделать Вам сайт!</h2>
+                <p>Хотите узнать стоимость? Напишите нам!</p>
+                <a href="#" data-toggle="modal" data-target="#quiz" class="primary-btn">Заполнить анкету</a>
             </div>
             <img src="/resource/img/cta-bg-shape.png" alt="" class="cta-shape img-fluid">
         </div>
     </div>
 </section>
 <!--================ End CTA Area =================-->
+
+<div class="modal modal-message fade" id="quiz" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                    <i class="fa fa-close"></i>
+                </button>
+
+                <h2>Анкета</h2>
+                <p>В ответ на анкету мы пришлем вам информацию по проекту.</p>
+
+                <form class="row quiz_form" action="/form/forma-zayavki" method="post" id="quizForm" novalidate="novalidate">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Ваше имя">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Ваш E-Mail">
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <select class="form-control" name="type">
+                            <option data-display="Тип сайта" value="other">Нет в списке</option>
+                            <option value="blog">Личный блог</option>
+                            <option value="news">Новостной сайт</option>
+                            <option value="landing">Лендинг</option>
+                            <option value="shop">Интернет-Магазиг</option>
+                        </select>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <textarea class="form-control" name="comment" id="comment" rows="3" placeholder="Ваш комментарий"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="default-select">
+                            <select class="form-control" name="region">
+                                <option data-display="Регион" value="other">Другой</option>
+                                <option value="ru">Россия</option>
+                                <option value="by">Беларусь</option>
+                                <option value="ua">Украина</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-12 text-right">
+                        <button type="submit" value="submit" class="primary-btn">Отправить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--================ CTA Success and Error message Area =================-->
+<div class="modal modal-message fade" id="success-quiz" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                    <i class="fa fa-close"></i>
+                </button>
+                <h2>Спасибо</h2>
+                <p>Ваша анкета успешно отправлена!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modals error -->
+<div class="modal modal-message fade" id="error" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                    <i class="fa fa-close"></i>
+                </button>
+                <h2>Упс!</h2>
+                <p>Что-то пошло как всегда..</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--================End CTA Success and Error message Area =================-->
