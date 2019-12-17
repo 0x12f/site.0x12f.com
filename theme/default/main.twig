@@ -10,6 +10,10 @@
         gtag('config', 'UA-146652916-1');
     </script>
 
+    <meta name="description" content="{{ page.meta ? page.meta.description : parameter('common_description') }}">
+    <meta name="keywords" content="{{ page.meta ? page.meta.keywords : parameter('common_keywords') }}">
+    <meta name="canonical" content="{{ parameter('common_homepage') }}">
+
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700|Roboto:400,400i,500" rel="stylesheet">
 
     <link rel="stylesheet" href="/resource/css/linearicons.css">
