@@ -4,33 +4,33 @@
         <div class="row align-items-center">
             <div class="col-lg-6 col-md-6">
                 <div class="portfolio-main">
-                    <h1>
-                        Портфолио<br>
-                        Демонстрация
-                    </h1>
+                    <h1>Проекты</h1>
                     <p>
-                        Проекты наших партнеров и наших клиентов
+                        Здесь собраны проекты наших партнеров и заказы клиентов
                     </p>
-                    {#<a href="#" class="primary-btn">View all Works</a>#}
+                    <a href="/portfolio" class="primary-btn">Смотреть все</a>
                 </div>
             </div>
             <div class="col-lg-6 col-md-6">
                 <div class="active-gallery-carousel">
-                    <!-- single gallery -->
-                    <div class="single-gallery">
-                        <img class="img-fluid" src="/resource/img/project/gallery1.jpg" alt="">
-                        <div class="gallery-content">
-                            <p>Proper Guided Tour</p>
-                            <h4>Santorini Island Dream <br>
-                                Holiday and Fun <br>
-                                Package</h4>
+                    {% set categories = publication_category() %}
+                    {% for item in publication({'category': categories.whereIn('address', ['portfolio']).pluck('uuid').all}, {'date': 'desc'}, 3) %}
+                        {% set file = files({'item_uuid': item.uuid}).first %}
+
+                        <!-- single gallery -->
+                        <div class="single-gallery">
+                            <img class="img-fluid" src="{{ file.getPublicPath() }}" alt="{{ item.title }}">
+                            <div class="gallery-content">
+                                <p>{{ item.title }}</p>
+                                <h4>{{ item.content.short|raw }}</h4>
+                            </div>
+                            <div class="light-box">
+                                <a href="/{{ item.address }}" class="img-popup">
+                                    <span class="lnr lnr-link"></span>
+                                </a>
+                            </div>
                         </div>
-                        <div class="light-box">
-                            <a href="/resource/img/project/gallery1.jpg" class="img-popup">
-                                <span class="lnr lnr-link"></span>
-                            </a>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>

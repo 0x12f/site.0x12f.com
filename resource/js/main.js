@@ -19,13 +19,13 @@ $(function() {
 	/*----------------------------------------------------*/
 
 	// for img popup //
-    $(".portfolio-area").magnificPopup({
-        delegate: '.img-popup',
-        type: 'image',
-        gallery: {
-           enabled: true
-       }
-    });
+    // $(".portfolio-area").magnificPopup({
+    //     delegate: '.img-popup',
+    //     type: 'image',
+    //     gallery: {
+    //        enabled: true
+    //    }
+    // });
 	
 	// home video //
 	$('.video-play-button').magnificPopup({
