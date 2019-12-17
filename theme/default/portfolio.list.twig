@@ -1,4 +1,4 @@
-{% extends 'page.twig' %}
+{% extends 'main.twig' %}
 
 {% set meta = category.meta %}
 
@@ -19,34 +19,32 @@
     </section>
     <!--================End Home Banner Area =================-->
 
-    {% block page %}
-        <!--================ Start Portfolio Service Area =================-->
-        <section class="portfolio-area section-gap">
-            <div class="container-fluid">
-                <div class="row align-items-center">
-                    <div class="col-lg-6 col-md-6">
-                        <div class="portfolio-main">
-                            <h1>Проекты</h1>
-                            <p>
-                                Здесь собраны проекты наших партнеров и заказы клиентов
-                            </p>
-                        </div>
+    <!--================ Start Portfolio Service Area =================-->
+    <section class="portfolio-area section-gap">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-6">
+                    <div class="portfolio-main">
+                        <h1>Проекты</h1>
+                        <p>
+                            Здесь собраны проекты наших партнеров и заказы клиентов
+                        </p>
                     </div>
-                    <div class="col-lg-6 col-md-6">
-                        <div class="active-gallery-carousel">
-                            {% for item in publications %}
-                                {% include category.template.short with {'categories': categories, 'item': item, 'files': files} only %}
-                            {% endfor %}
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="active-gallery-carousel">
+                        {% for item in publications %}
+                            {% include category.template.short with {'categories': categories, 'item': item, 'files': files} only %}
+                        {% endfor %}
 
-                            {% include 'pagination.twig' with {'pagination':pagination} only %}
-                        </div>
+                        {% include 'pagination.twig' with {'pagination':pagination} only %}
                     </div>
                 </div>
             </div>
-        </section>
-        <!--================ End Portfolio Service Area =================-->
+        </div>
+    </section>
+    <!--================ End Portfolio Service Area =================-->
 
-        {% include "common/guestbook.twig" %}
-        {% include "common/cta.twig" %}
-    {% endblock %}
+    {% include "common/cta.twig" %}
+    {% include "common/guestbook.twig" %}
 {% endblock %}
