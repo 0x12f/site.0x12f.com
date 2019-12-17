@@ -8,7 +8,7 @@ services:
     platform:
         image: 0x12f/platform:dev
         environment:
-            - DEBUG=1
+            - DEBUG=0
             - ANALYTICS=0
             - SALT=si12Fd-d3stcR-hD19Ld
           # - DATABASE=mysql://user:secret@localhost/mydb
