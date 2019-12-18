@@ -19,13 +19,9 @@ $(function() {
 	/*----------------------------------------------------*/
 
 	// for img popup //
-    // $(".portfolio-area").magnificPopup({
-    //     delegate: '.img-popup',
-    //     type: 'image',
-    //     gallery: {
-    //        enabled: true
-    //    }
-    // });
+    $(".img-popup").magnificPopup({
+        type: 'image',
+    });
 	
 	// home video //
 	$('.video-play-button').magnificPopup({

@@ -6615,4 +6615,10 @@ select.form-control + .nice-select {
     color: #6c757d;
 }
 
+.owl-carousel .owl-item img {
+    min-height: 430px;
+    object-position: center center;
+    object-fit: cover;
+}
+
 /*# sourceMappingURL=main.css.map */

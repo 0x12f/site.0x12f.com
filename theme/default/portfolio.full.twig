@@ -28,7 +28,9 @@
                 <div class="row">
                     <div class="col-lg-6 col-md-6">
                         <div class="service-img">
-                            <img class="img-fluid" src="{{ files.firstWhere('item_uuid', publication.uuid).getPublicPath() }}" alt="">
+                            <a class="img-popup" href="{{ files.firstWhere('item_uuid', publication.uuid).getPublicPath() }}">
+                                <img class="img-fluid" style="width: 100%;" src="{{ files.firstWhere('item_uuid', publication.uuid).getPublicPath('middle') }}" alt="{{ publication.title }}">
+                            </a>
                         </div>
                     </div>
                     <div class="col-lg-5 offset-lg-1 col-md-6">
@@ -37,12 +39,6 @@
                             <h4>{{ publication.title }}</h4>
 
                             {{ publication.content.full|raw }}
-
-                            <ul class="list">
-                                <li><span>Клиент</span>: FrashNails</li>
-                                <li><span>Сайт</span>: -</li>
-                                <li><span>Дата</span>: {{ publication.date|df }}</li>
-                            </ul>
                         </div>
                     </div>
                 </div>
