@@ -26,7 +26,7 @@ $(document).ready(function () {
                     email: {
                         required: 'Нет обратного E-Mail - нет ответа'
                     },
-                    message: {
+                    comment: {
                         required: 'Напишите что-нибудь нам, пожалуйста',
                         minlength: 'Попробуйте подробней..'
                     }

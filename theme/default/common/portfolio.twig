@@ -13,8 +13,7 @@
             </div>
             <div class="col-lg-6 col-md-6">
                 <div class="active-gallery-carousel">
-                    {% set categories = publication_category() %}
-                    {% for item in publication({'category': categories.whereIn('address', ['portfolio']).pluck('uuid').all}, {'date': 'desc'}, 3) %}
+                    {% for item in publication({'category': '9833e816-9b37-480a-acd5-eb89544de4c6'}, {'date': 'desc'}, 3) %}
                         {% set file = files({'item_uuid': item.uuid}).first %}
 
                         <!-- single gallery -->

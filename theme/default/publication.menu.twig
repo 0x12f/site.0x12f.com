@@ -1,9 +1,7 @@
 {% for node in categories.where('parent', '=', parent ?? '00000000-0000-0000-0000-000000000000').sortBy('order') %}
-    {% if node.uuid != '9833e816-9b37-480a-acd5-eb89544de4c6' %}
-        <li class="">
-            <a href="/{{ node.address }}" class="d-flex justify-content-between">
-                <p>{{ node.title }}</p>
-            </a>
-        </li>
-    {% endif %}
+    <li class="">
+        <a href="/{{ node.address }}" class="d-flex justify-content-between">
+            <p>{{ node.title }}</p>
+        </a>
+    </li>
 {% endfor %}
