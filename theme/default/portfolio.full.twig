@@ -28,8 +28,8 @@
                 <div class="row">
                     <div class="col-lg-6 col-md-6">
                         <div class="service-img">
-                            <a class="img-popup" href="{{ files.firstWhere('item_uuid', publication.uuid).getPublicPath() }}">
-                                <img class="img-fluid" style="width: 100%;" src="{{ files.firstWhere('item_uuid', publication.uuid).getPublicPath('middle') }}" alt="{{ publication.title }}">
+                            <a class="img-popup" href="{{ publication.getFiles().first().getPublicPath() }}">
+                                <img class="img-fluid" style="width: 100%;" src="{{ publication.getFiles().first().getPublicPath('middle') }}" alt="{{ publication.title }}">
                             </a>
                         </div>
                     </div>

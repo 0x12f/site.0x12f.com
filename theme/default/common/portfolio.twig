@@ -14,11 +14,9 @@
             <div class="col-lg-6 col-md-6">
                 <div class="active-gallery-carousel">
                     {% for item in publication({'category': '9833e816-9b37-480a-acd5-eb89544de4c6'}, {'date': 'desc'}, 3) %}
-                        {% set file = files({'item_uuid': item.uuid}).first %}
-
                         <!-- single gallery -->
                         <div class="single-gallery">
-                            <img class="img-fluid" src="{{ file.getPublicPath() }}" alt="{{ item.title }}">
+                            <img class="img-fluid" src="{{ item.getFiles().first().getPublicPath() }}" alt="{{ item.title }}">
                             <div class="gallery-content text-center">
                                 <p>{{ item.title }}</p>
                                 <h4>{{ item.content.short|raw }}</h4>
