@@ -1,0 +1,23 @@
+<li class="nav-item dropdown hidden-caret">
+    <a class="nav-link" data-toggle="dropdown" href="#" aria-expanded="false">
+        <i class="fas fa-broom"></i>
+    </a>
+    <div class="dropdown-menu quick-actions quick-actions-info animated fadeIn" style="width: 200px;">
+        <div class="quick-actions-header">
+            <span class="title mb-1">ClearCache</span>
+            <span class="subtitle op-8">Чистка кеш данных</span>
+        </div>
+        <div class="quick-actions-scroll scrollbar-outer">
+            <div class="quick-actions-items">
+                <form action="/cup/task/run" method="post" class="row m-0">
+                    <button type="submit" name="task" value="Plugin\ClearCache\Tasks\ClearCacheTask" class="col-12 col-md-12 p-0 btn btn-link">
+                        <div class="quick-actions-item">
+                            <i class="fas fa-hand-sparkles"></i>
+                            <span class="text">Выполнить чистку</span>
+                        </div>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</li>

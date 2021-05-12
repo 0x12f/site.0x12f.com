@@ -1,36 +1,41 @@
-<!--================ Start Portfolio Service Area =================-->
-<section class="portfolio-area section-gap">
-    <div class="container-fluid">
-        <div class="row align-items-center">
-            <div class="col-lg-6 col-md-6">
-                <div class="portfolio-main">
-                    <h1>Проекты</h1>
-                    <p>
-                        Здесь собраны проекты наших партнеров и заказы клиентов
-                    </p>
-                    <a href="/portfolio" class="primary-btn">Смотреть все</a>
+{% set categories = publication_category() %}
+{% set publications = publication({'category': categories.whereIn('address', ['portfolio']).all}, {'date': 'desc'}, 3) %}
+
+{% if publications.count() %}
+    <!--================ Start Portfolio Service Area =================-->
+    <section class="portfolio-area section-gap">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-6">
+                    <div class="portfolio-main">
+                        <h1>Проекты</h1>
+                        <p>
+                            Здесь собраны проекты наших партнеров и заказы клиентов
+                        </p>
+                        <a href="/portfolio" class="primary-btn">Смотреть все</a>
+                    </div>
                 </div>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <div class="active-gallery-carousel">
-                    {% for item in publication({'category': '9833e816-9b37-480a-acd5-eb89544de4c6'}, {'date': 'desc'}, 3) %}
-                        <!-- single gallery -->
-                        <div class="single-gallery">
-                            <img class="img-fluid" src="{{ item.getFiles().first().getPublicPath() }}" alt="{{ item.title }}">
-                            <div class="gallery-content text-center">
-                                <p>{{ item.title }}</p>
-                                <h4>{{ item.content.short|raw }}</h4>
+                <div class="col-lg-6 col-md-6">
+                    <div class="active-gallery-carousel">
+                        {% for item in publication({'category': '9833e816-9b37-480a-acd5-eb89544de4c6'}, {'date': 'desc'}, 3) %}
+                            <!-- single gallery -->
+                            <div class="single-gallery">
+                                <img class="img-fluid" src="{{ item.getFiles().first().getPublicPath() }}" alt="{{ item.title }}">
+                                <div class="gallery-content text-center">
+                                    <p>{{ item.title }}</p>
+                                    <h4>{{ item.content.short|raw }}</h4>
+                                </div>
+                                <div class="light-box">
+                                    <a href="/{{ item.address }}">
+                                        <span class="lnr lnr-link"></span>
+                                    </a>
+                                </div>
                             </div>
-                            <div class="light-box">
-                                <a href="/{{ item.address }}">
-                                    <span class="lnr lnr-link"></span>
-                                </a>
-                            </div>
-                        </div>
-                    {% endfor %}
+                        {% endfor %}
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-<!--================ End Portfolio Service Area =================-->
+    </section>
+    <!--================ End Portfolio Service Area =================-->
+{% endif %}

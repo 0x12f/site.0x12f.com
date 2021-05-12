@@ -1,0 +1,35 @@
+<li class="nav-item dropdown hidden-caret">
+    <a class="nav-link" data-toggle="dropdown" href="#" aria-expanded="false">
+        <i class="fas fa-robot"></i>
+    </a>
+    <div class="dropdown-menu quick-actions quick-actions-info animated fadeIn" style="width: 200px;">
+        <div class="quick-actions-header">
+            <span class="title mb-1">SEO</span>
+            <span class="subtitle op-8">Для ботов и интеграций</span>
+        </div>
+        <div class="quick-actions-scroll scrollbar-outer">
+            <div class="quick-actions-items">
+                <form action="/cup/task/run" method="post" class="row m-0">
+                    <button type="submit" name="task" value="Plugin\SearchOptimization\Tasks\SiteMapTask" class="col-12 p-0 btn btn-link">
+                        <div class="quick-actions-item">
+                            <i class="fas fa-file-alt"></i>
+                            <span class="text">Сгенерировать SiteMap</span>
+                        </div>
+                    </button>
+                    <button type="submit" name="task" value="Plugin\SearchOptimization\Tasks\YMLTask" class="col-12 p-0 btn btn-link">
+                        <div class="quick-actions-item">
+                            <i class="fas fa-file-alt"></i>
+                            <span class="text">Сгенерировать YML</span>
+                        </div>
+                    </button>
+                    <button type="submit" name="task" value="Plugin\SearchOptimization\Tasks\GMFTask" class="col-12 p-0 btn btn-link">
+                        <div class="quick-actions-item">
+                            <i class="fas fa-file-alt"></i>
+                            <span class="text">Сгенерировать GMF</span>
+                        </div>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</li>

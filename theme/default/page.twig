@@ -6,6 +6,10 @@
     {% include "common/home.twig" %}
 
     {% block page %}
-        {{ page.content|raw }}
+        <section class="contact_area section-gap">
+            <div class="container">
+                {{ page.content|raw }}
+            </div>
+        </section>
     {% endblock %}
 {% endblock %}

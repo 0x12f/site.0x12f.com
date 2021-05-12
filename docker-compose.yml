@@ -6,13 +6,13 @@ networks:
 
 services:
     platform:
-        image: 0x12f/platform:dev
+        image: getwebspace/platform:dev
         environment:
-            - DEBUG=0
-            - ANALYTICS=0
+            - DEBUG=1
             - SALT=si12Fd-d3stcR-hD19Ld
-          # - DATABASE=mysql://user:secret@localhost/mydb
+            - DATABASE=mysql://demo:D3hD4xg8hd@mysql/site
         volumes:
+            - ./plugin:/var/container/plugin:ro
             - ./resource:/var/container/public/resource:ro
             - ./theme:/var/container/theme:ro
             - ./var:/var/container/var:rw
@@ -20,9 +20,10 @@ services:
         labels:
             - traefik.enable=true
             - traefik.port=80
-            - traefik.backend=site.0x12f.com
-            - traefik.frontend.rule=Host:site.0x12f.com
+            - traefik.backend=getwebspace.org
+            - traefik.frontend.rule=Host:getwebspace.org
             - traefik.frontend.redirect.entryPoint=https
             - traefik.docker.network=web
         networks:
             - web
+        restart: always
