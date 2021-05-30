@@ -1,5 +1,12 @@
 {% extends 'page.twig' %}
 
+{% block head %}
+    {{ parent() }}
+
+    <link rel="stylesheet" href="/resource/css/swiper.min.css" type="text/css">
+    <script defer src="/resource/js/swiper.min.js"></script>
+{% endblock %}
+
 {% block additional %}
     {% include 'common/brand.twig' %}
 

@@ -7,21 +7,19 @@
     <meta name="keywords" content="{{ meta ? meta.keywords : parameter('common_keywords') }}">
     <meta name="canonical" content="{{ parameter('common_homepage') }}">
 
-    <meta name="msapplication-TileColor" content="#fa7070">
-    <meta name="theme-color" content="#fa7070">
+    <meta name="msapplication-TileColor" content="#f83f3f">
+    <meta name="theme-color" content="#f83f3f">
 
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/fav/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/fav/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/fav/favicon-16x16.png">
-    <link rel="mask-icon" href="assets/img/fav/safari-pinned-tab.svg" color="#fa7070">
+{#    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/fav/apple-touch-icon.png">#}
+{#    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/fav/favicon-32x32.png">#}
+{#    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/fav/favicon-16x16.png">#}
+{#    <link rel="mask-icon" href="assets/img/fav/safari-pinned-tab.svg" color="#fa7070">#}
 
     <!-- Dependency Styles -->
+    <link rel="preconnect" href="https://getwebspace.org">
     <link rel="stylesheet" href="/resource/css/bootstrap.css" type="text/css">
     <link rel="stylesheet" href="/resource/css/all.min.css" type="text/css">
     <link rel="stylesheet" href="/resource/css/elegant-icons.min.css" type="text/css">
-    <link rel="stylesheet" href="/resource/css/swiper.min.css" type="text/css">
-    <link rel="stylesheet" href="/resource/css/animate.css" type="text/css">
-    <link rel="stylesheet" href="/resource/css/magnific-popup.css" type="text/css">
 
     <!-- Site Stylesheet -->
     <link rel="stylesheet" href="/resource/css/main.css" type="text/css">
@@ -58,21 +56,24 @@
             </div><!-- /#site -->
         {% endblock %}
 
+        <!-- Dependency Styles -->
+        <link rel="stylesheet" href="/resource/css/animate.css" type="text/css">
+        <link rel="stylesheet" href="/resource/css/magnific-popup.css" type="text/css">
+
         <!-- Dependency Scripts -->
         <script src="/resource/js/vendor/jquery.min.js"></script>
         <script src="/resource/js/vendor/bootstrap.min.js"></script>
-        <script src="/resource/js/swiper.min.js"></script>
-        <script src="/resource/js/jquery.appear.js"></script>
-        <script src="/resource/js/wow.min.js"></script>
-        <script src="/resource/js/countUp.min.js"></script>
-        <script src="/resource/js/isotope.pkgd.min.js"></script>
-        <script src="/resource/js/imagesloaded.pkgd.min.js"></script>
-        <script src="/resource/js/jquery.parallax-scroll.js"></script>
-        <script src="/resource/js/jquery.magnific-popup.min.js"></script>
+        <script defer src="/resource/js/jquery.appear.js"></script>
+        <script defer src="/resource/js/wow.min.js"></script>
+        <script defer src="/resource/js/countUp.min.js"></script>
+        <script defer src="/resource/js/isotope.pkgd.min.js"></script>
+        <script defer src="/resource/js/imagesloaded.pkgd.min.js"></script>
+        <script defer src="/resource/js/jquery.parallax-scroll.js"></script>
+        <script defer src="/resource/js/jquery.magnific-popup.min.js"></script>
 
         <!-- Site Scripts -->
-        <script src="/resource/js/header.js"></script>
-        <script src="/resource/js/app.js"></script>
+        <script defer src="/resource/js/header.js"></script>
+        <script defer src="/resource/js/app.js"></script>
 
         {% include 'mixin/img-script.twig' %}
 
@@ -82,7 +83,7 @@
                 function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
                 m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}
             )(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-            ym(78955177, "init", {clickmap:true, trackLinks:true, accurateTrackBounce:true});
+            ym(78955177, "init", {clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true});
         </script>
         <noscript><div><img src="https://mc.yandex.ru/watch/78955177" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
         <!-- /Yandex.Metrika counter -->
