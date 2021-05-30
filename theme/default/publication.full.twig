@@ -45,25 +45,22 @@
                 <div class="{{ category.public ? 'col-lg-8' : 'col-lg-12' }}">
                     <div class="post-wrapper" {{ category.public == false ? 'style="max-width: unset"' : '' }}>
                         <article class="post post-signle">
-                            <div class="feature-image">
-                                <a href="blog-signle.html">
-                                    <img src="media/blog/4.jpg" alt="">
-                                </a>
-                            </div>
+                            {% if publication.hasFiles() %}
+                                <div class="feature-image">
+                                    {% include 'mixins/img.twig' with {
+                                        'src': publication.getFiles().first().getPublicPath('middle'),
+                                        'title': publication.title,
+                                    } only %}
+                                </div>
+                            {% endif %}
                             <div class="blog-content">
-                                {% if publication.hasFiles() %}
-                                    <div class="feature-image mb-3">
-                                        <img src="{{ publication.getFiles().first().getPublicPath('middle') }}" alt="{{ publication.title }}">
-                                    </div>
-                                {% endif %}
-
                                 {{ publication.content.full|raw }}
                             </div><!-- /.post-content -->
                         </article><!-- /.post -->
 
                         <div class="pixsass_post_author_box clearfix my-5">
                             <div class="profile_image">
-                                <img src="{{ publication.user.avatar() }}" alt="author">
+                                {% include 'mixins/img.twig' with { 'src': publication.user.avatar(),'style': 'max-height: 40px;','alt': 'author' } only %}
                             </div><!-- /.profile_image -->
                             <div class="profile_content">
                                 <h4 class="profile_name">{{ publication.user.getName('short') }}</h4>

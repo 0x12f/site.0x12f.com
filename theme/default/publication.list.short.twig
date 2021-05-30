@@ -4,7 +4,10 @@
     {% if item.hasFiles() %}
         <div class="feature-image">
             <a href="/{{ category.address }}">
-                <img src="{{ item.getFiles().first().getPublicPath('middle') }}" alt="{{ item.title }}">
+                {% include 'mixins/img.twig' with {
+                    'src': item.getFiles().first().getPublicPath('middle'),
+                    'title': item.title,
+                } only %}
             </a>
         </div>
     {% endif %}
@@ -19,7 +22,7 @@
         <a href="/{{ item.address }}" class="read-more">Читать дальше <i class="ei ei-arrow_right"></i></a>
 
         <div class="author">
-            <img src="{{ item.user.avatar() }}" alt="author">
+            {% include 'mixins/img.twig' with { 'src': item.user.avatar(),'style': 'max-height: 40px;','alt': 'author' } only %}
             <span class="author-link">{{ item.user.getName('short') }}</span>
         </div>
     </div><!-- /.post-content -->
