@@ -1,0 +1,15 @@
+{% extends 'main.twig' %}
+
+{% set meta = page.meta %}
+
+{% block bodyinner %}
+    {% include "common/home.twig" %}
+
+    {% block page %}
+        <section class="contact_area section-gap">
+            <div class="container">
+                {{ page.content|raw }}
+            </div>
+        </section>
+    {% endblock %}
+{% endblock %}

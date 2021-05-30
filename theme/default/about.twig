@@ -1,0 +1,86 @@
+{% extends 'page.twig' %}
+
+{% block additional %}
+    {% include 'common/brand.twig' %}
+
+    <!--===========================-->
+    <!--=         Count Up        =-->
+    <!--===========================-->
+    <section class="countup">
+        <div class="bg-map" data-bg-image="/resource/img/background/map2.png"></div>
+        <div class="container">
+            <div class="section-title text-center">
+                <h3 class="sub-title wow pixFadeUp">Наши успехи</h3>
+                <h2 class="title wow pixFadeUp" data-wow-delay="0.2s">
+                    Статистика нашего репозитория
+                </h2>
+            </div>
+            <!-- /.section-title -->
+
+            <div class="countup-wrapper">
+                <div class="row text-center">
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="fun-fact wow pixFadeUp" data-wow-delay="0.3s">
+                            <div class="counter">
+                                <h4 class="count stargazers_count">0</h4>
+                            </div>
+                            <!-- /.counter -->
+                            <p>Всего звёзд</p>
+                        </div>
+                        <!-- /.fun-fact -->
+                    </div>
+                    <!-- /.col-lg-3 col-md-6 col-sm-6 -->
+
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="fun-fact color-two wow pixFadeUp" data-wow-delay="0.5s">
+                            <div class="counter">
+                                <h4 class="count watchers_count">0</h4>
+                            </div>
+                            <!-- /.counter -->
+                            <p>Всего наблюдает</p>
+                        </div>
+                        <!-- /.fun-fact -->
+                    </div>
+                    <!-- /.col-lg-3 col-md-6 col-sm-6 -->
+
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="fun-fact color-three wow pixFadeUp" data-wow-delay="0.7s">
+                            <div class="counter">
+                                <h4 class="count forks_count">0</h4>
+                            </div>
+                            <!-- /.counter -->
+                            <p>Всего форков</p>
+                        </div>
+                        <!-- /.fun-fact -->
+                    </div>
+                    <!-- /.col-lg-3 col-md-6 col-sm-6 -->
+
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="fun-fact color-four wow pixFadeUp" data-wow-delay="0.9s">
+                            <div class="counter">
+                                <h4 class="count open_issues_count">0</h4>
+                            </div>
+                            <!-- /.counter -->
+                            <p>Всего задач</p>
+                        </div>
+                        <!-- /.fun-fact -->
+                    </div>
+                    <!-- /.col-lg-3 col-md-6 col-sm-6 -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.countup-wrapper -->
+
+            <div class="button-container text-center wow pixFadeUp" data-wow-delay="0.3s">
+                <a href="https://github.com/getwebspace/platform" target="_blank" class="pix-btn btn-outline">
+                    Начать следить
+                    <i class="fab fa-github-alt"></i>
+                </a>
+            </div>
+            <!-- /.button-container -->
+        </div>
+        <!-- /.container -->
+    </section>
+    <!-- /.countup -->
+{% endblock %}
+

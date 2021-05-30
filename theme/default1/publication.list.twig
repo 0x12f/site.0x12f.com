@@ -1,0 +1,52 @@
+{% extends 'main.twig' %}
+
+{% set meta = category.meta %}
+
+{% block bodyinner %}
+    <!--================Home Banner Area =================-->
+    <section class="banner_area ">
+        <div class="banner_inner overlay d-flex align-items-center">
+            <div class="container">
+                <div class="banner_content text-left">
+                    <div class="page_link">
+                        <a href="/">Главная</a>
+                        <a href="/{{ category.address }}">{{ category.title }}</a>
+                    </div>
+                    <h2>{{ category.title }}</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================End Home Banner Area =================-->
+
+    <!--================Blog Area =================-->
+    <section class="blog_area section-gap">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="blog_left_sidebar">
+                        {% for item in publications %}
+                            {% include category.template.short with {'categories': categories, 'item': item} only %}
+                        {% endfor %}
+
+                        {% include 'pagination.twig' with {'pagination':pagination} only %}
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="blog_right_sidebar">
+                        <aside class="single_sidebar_widget post_category_widget">
+                            <h4 class="widget_title">Другие категории</h4>
+                            <ul class="list cat-list">
+                                {% include 'publication.menu.twig' with {'categories':categories} only %}
+                            </ul>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================Blog Area =================-->
+
+    {% include "common/cta.twig" %}
+    {% include "common/guestbook.twig" %}
+{% endblock %}

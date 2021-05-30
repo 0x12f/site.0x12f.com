@@ -1,0 +1,26 @@
+{% set category = categories.firstWhere('uuid', item.category) %}
+
+<article class="post">
+    {% if item.hasFiles() %}
+        <div class="feature-image">
+            <a href="/{{ category.address }}">
+                <img src="{{ item.getFiles().first().getPublicPath('middle') }}" alt="{{ item.title }}">
+            </a>
+        </div>
+    {% endif %}
+
+    <div class="blog-content">
+        <ul class="post-meta">
+            <li><a href="/{{ category.address }}">{{ item.date|df('d.m.Y H:i') }}</a></li>
+        </ul>
+
+        <h3 class="entry-title"><a href="/{{ item.address }}">{{ item.title }}</a></h3>
+        {{ item.content.short|raw }}
+        <a href="/{{ item.address }}" class="read-more">Читать дальше <i class="ei ei-arrow_right"></i></a>
+
+        <div class="author">
+            <img src="{{ item.user.avatar() }}" alt="author">
+            <span class="author-link">{{ item.user.getName('short') }}</span>
+        </div>
+    </div><!-- /.post-content -->
+</article><!-- /.post -->

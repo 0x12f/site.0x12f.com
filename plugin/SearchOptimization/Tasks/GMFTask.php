@@ -7,7 +7,7 @@ use App\Domain\Service\Catalog\CategoryService;
 use App\Domain\Service\Catalog\ProductService;
 use Illuminate\Support\Collection;
 
-include_once __DIR__ . '../helper.php';
+include_once __DIR__ . '/../helper.php';
 
 class GMFTask extends AbstractTask
 {

@@ -20,7 +20,7 @@ class SearchOptimizationPlugin extends AbstractPlugin
                         '<a href="/robots.txt" target="_blank">robots.txt</a>';
     const AUTHOR = 'Aleksey Ilyin';
     const AUTHOR_SITE = 'https://getwebspace.org';
-    const VERSION = '2.3';
+    const VERSION = '2.1';
 
     public function __construct(ContainerInterface $container)
     {
@@ -213,7 +213,7 @@ class SearchOptimizationPlugin extends AbstractPlugin
 
                     break;
             }
-            ;
+;
         }
 
         return $response;

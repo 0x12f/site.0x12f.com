@@ -1,0 +1,25 @@
+{% set category = categories.firstWhere('uuid', item.category) %}
+
+<div class="col-lg-4 col-md-6">
+    <article class="post-post-grid">
+        {% if item.hasFiles() %}
+            <div class="feature-image">
+                <a href="/{{ category.address }}">
+                    <img src="{{ item.getFiles().first().getPublicPath('middle') }}" alt="{{ item.title }}">
+                </a>
+            </div>
+        {% endif %}
+
+        <div class="blog-content">
+            <ul class="post-meta">
+                <li><a href="/{{ category.address }}">{{ item.date|df('d.m.Y H:i') }}</a></li>
+            </ul>
+            <h3 class="entry-title"><a href="/{{ item.address }}">{{ item.title }}</a></h3>
+            <div class="author">
+                <img src="{{ item.user.avatar() }}" alt="author">
+                <span class="author-link">{{ item.user.getName('short') }}</span>
+            </div>
+        </div><!-- /.post-content -->
+    </article><!-- /.post -->
+</div>
+<!-- /.col-lg-4 -->

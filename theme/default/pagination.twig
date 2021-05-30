@@ -2,10 +2,10 @@
 
 {% if pages > 1 %}
     <nav>
-        <ul class="pagination justify-content-center">
+        <ul class="post-navigation">
             {% for page in 0..pages-1 %}
-                <li class="page-item {{ is_current_page_number(page) ? 'active' : '' }}">
-                    <a class="page-link" href="{{ non_page_path() }}{{ page ? '/' ~ page : '' }}{{ current_query() }}">{{ page + 1 }}</a>
+                <li class="{{ is_current_page_number(page) ? 'active' : '' }}">
+                    <a href="{{ non_page_path() }}{{ page ? '/' ~ page : '' }}{{ current_query() }}">{{ page + 1 }}</a>
                 </li>
             {% endfor %}
         </ul>

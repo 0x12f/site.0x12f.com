@@ -1,72 +1,89 @@
 {% extends 'layout.twig' %}
 
-{% block head %}
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-146652916-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-146652916-1');
-    </script>
+{# https://saaspik.pixelsigns.art/saaspik/index.html #}
 
+{% block head %}
     <meta name="description" content="{{ meta ? meta.description : parameter('common_description') }}">
     <meta name="keywords" content="{{ meta ? meta.keywords : parameter('common_keywords') }}">
     <meta name="canonical" content="{{ parameter('common_homepage') }}">
 
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700|Roboto:400,400i,500" rel="stylesheet">
+    <meta name="msapplication-TileColor" content="#fa7070">
+    <meta name="theme-color" content="#fa7070">
 
-    <link rel="stylesheet" href="/resource/css/linearicons.css">
-    <link rel="stylesheet" href="/resource/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/resource/css/bootstrap.css">
-    <link rel="stylesheet" href="/resource/css/magnific-popup.css">
-    <link rel="stylesheet" href="/resource/css/owl.carousel.css">
-    <link rel="stylesheet" href="/resource/css/hexagons.min.css">
-    <link rel="stylesheet" href="/resource/css/nice-select.css">
-    <link rel="stylesheet" href="/resource/css/main.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/fav/favicon-16x16.png">
+    <link rel="mask-icon" href="assets/img/fav/safari-pinned-tab.svg" color="#fa7070">
+
+    <!-- Dependency Styles -->
+    <link rel="stylesheet" href="/resource/css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="/resource/css/all.min.css" type="text/css">
+    <link rel="stylesheet" href="/resource/css/elegant-icons.min.css" type="text/css">
+    <link rel="stylesheet" href="/resource/css/swiper.min.css" type="text/css">
+    <link rel="stylesheet" href="/resource/css/animate.css" type="text/css">
+    <link rel="stylesheet" href="/resource/css/magnific-popup.css" type="text/css">
+
+    <!-- Site Stylesheet -->
+    <link rel="stylesheet" href="/resource/css/main.css" type="text/css">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;800;900&family=Satisfy&display=swap" rel="stylesheet">
 {% endblock %}
 
 {% block body %}
-    <body>
-        {% include "common/menu.twig" %}
+    <body id="home-version-1" class="home-version-4" data-style="default">
 
         {% block bodyinner %}
-            {% block page %}
-                {% include "common/hero.twig" %}
-                {#{% include "common/brands.twig" %}#}
-                {% include "common/service.twig" %}
-                {% include "common/productivity.twig" %}
-                {% include "common/portfolio.twig" %}
-                {% include "common/guestbook.twig" %}
-                {% include "common/cta.twig" %}
-                {#{% include "common/team.twig" %}#}
-                {% include "common/blog.twig" %}
-            {% endblock %}
+            <a href="#main_content" data-type="section-switch" class="return-to-top">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+            {% include "common/page-loader.twig" %}
+
+            <div id="main_content">
+                {% include "common/header.twig" %}
+
+                {% block page %}
+                    {% include "common/banner.twig" %}
+                    {% include "common/feature.twig" %}
+                    {% include "common/revolutionize.twig" %}
+                    {% include "common/service.twig" %}
+                    {#{% include "common/testimonial.twig" %}#}
+                    {% include "common/pricing.twig" %}
+                    {% include "common/call-to-action.twig" %}
+                    {% include "common/blog.twig" %}
+                {% endblock %}
+
+                {% include "common/footer.twig" %}
+            </div><!-- /#site -->
         {% endblock %}
 
-        {% include "common/footer.twig" %}
-
-        <script src="/resource/js/vendor/jquery-2.2.4.min.js"></script>
-        <script src="/resource/js/vendor/popper.min.js"></script>
+        <!-- Dependency Scripts -->
+        <script src="/resource/js/vendor/jquery.min.js"></script>
         <script src="/resource/js/vendor/bootstrap.min.js"></script>
-        <script src="/resource/js/jquery.ajaxchimp.min.js"></script>
+        <script src="/resource/js/swiper.min.js"></script>
+        <script src="/resource/js/jquery.appear.js"></script>
+        <script src="/resource/js/wow.min.js"></script>
+        <script src="/resource/js/countUp.min.js"></script>
+        <script src="/resource/js/isotope.pkgd.min.js"></script>
+        <script src="/resource/js/imagesloaded.pkgd.min.js"></script>
+        <script src="/resource/js/jquery.parallax-scroll.js"></script>
         <script src="/resource/js/jquery.magnific-popup.min.js"></script>
-        <script src="/resource/js/parallax.min.js"></script>
-        <script src="/resource/js/owl.carousel.min.js"></script>
-        <script src="/resource/js/jquery.nice-select.min.js"></script>
-        <script src="/resource/js/jquery.sticky.js"></script>
-        <script src="/resource/js/hexagons.min.js"></script>
-        <script src="/resource/js/jquery.counterup.min.js"></script>
-        <script src="/resource/js/waypoints.min.js"></script>
-        <script src="/resource/js/main.js"></script>
 
-        <script src="/resource/js/jquery.form.js"></script>
-        <script src="/resource/js/jquery.validate.min.js"></script>
-        <script src="/resource/js/contact.js"></script>
-        <script src="/resource/js/guestbook.js"></script>
-        <script src="/resource/js/quiz.js"></script>
+        <!-- Site Scripts -->
+        <script src="/resource/js/header.js"></script>
+        <script src="/resource/js/app.js"></script>
 
-        {% include "mixin/recaptcha.twig" %}
+        <!-- Yandex.Metrika counter -->
+        <script type="text/javascript" >
+            (
+                function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+                m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}
+            )(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+            ym(78955177, "init", {clickmap:true, trackLinks:true, accurateTrackBounce:true});
+        </script>
+        <noscript><div><img src="https://mc.yandex.ru/watch/78955177" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+        <!-- /Yandex.Metrika counter -->
     </body>
 {% endblock %}
 

@@ -1,7 +1,0 @@
-{% for node in categories.where('parent', '=', parent ?? '00000000-0000-0000-0000-000000000000').sortBy('order') %}
-    <li class="">
-        <a href="/{{ node.address }}" class="d-flex justify-content-between">
-            <p>{{ node.title }}</p>
-        </a>
-    </li>
-{% endfor %}
